@@ -1,0 +1,24 @@
+// ============================================
+// Переменные из dataset/theme.json
+// ============================================
+
+// Цвета
+$color-accent: #315efb;
+$color-surface: #ffffff;
+$color-background: #f5f7fb;
+$color-text: #1f2937;
+
+// Размеры из theme.json
+$radius: 14px;
+$space: 16px;
+
+// Производные значения (вычисляются функциями Sass)
+$color-accent-hover: darken($color-accent, 10%);
+$color-border: rgba($color-text, 0.12);
+$color-muted: rgba($color-text, 0.6);
+
+// Контейнер и breakpoints
+$container-width: 1200px;
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;

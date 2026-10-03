@@ -1,0 +1,13 @@
+// ============================================
+// Точка входа. Подключает все partial-файлы.
+// ============================================
+
+@use "variables" as *;
+@use "mixins" as *;
+
+@use "base";
+@use "layout";
+
+@use "components/header";
+@use "components/card";
+@use "components/filters";

@@ -1,0 +1,39 @@
+// ============================================
+// Миксины (повторно используемые наборы свойств)
+// ============================================
+
+// Адаптивный контейнер
+@mixin container($max-width: $container-width) {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $space;
+}
+
+// Оформление «поверхности» (карточка, панель)
+@mixin surface-card {
+    background-color: $color-surface;
+    border-radius: $radius;
+    border: 1px solid $color-border;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+// Focus-состояние для доступности
+@mixin focus-ring {
+    outline: 3px solid rgba($color-accent, 0.4);
+    outline-offset: 2px;
+}
+
+// Медиазапрос для планшетов и мобильных
+@mixin mobile {
+    @media (max-width: #{$breakpoint-tablet - 1px}) {
+        @content;
+    }
+}
+
+// Медиазапрос для маленьких мобильных
+@mixin mobile-sm {
+    @media (max-width: #{$breakpoint-mobile - 1px}) {
+        @content;
+    }
+}

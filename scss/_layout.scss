@@ -1,0 +1,83 @@
+// ============================================
+// Layout: контейнер и основная сетка каталога
+// ============================================
+
+.container {
+    @include container;
+}
+
+// Двухколоночная сетка: фильтры + каталог
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: calc($space * 1.5);
+    align-items: start;
+    padding: calc($space * 2) 0;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Панель фильтров
+.filters {
+    @include surface-card;
+    padding: $space;
+    position: sticky;
+    top: calc($space + 60px);
+
+    @include mobile {
+        position: static;
+    }
+
+    &__title {
+        font-size: 1.1rem;
+        margin-bottom: $space;
+    }
+
+    &__group {
+        margin-bottom: $space;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 0.35rem;
+    }
+
+    &__select {
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid $color-border;
+        border-radius: calc($radius / 2);
+        font: inherit;
+        background-color: $color-surface;
+    }
+}
+
+// Область каталога
+.catalog {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $space;
+    }
+
+    &__count {
+        color: $color-muted;
+        font-size: 0.9rem;
+    }
+
+    // Адаптивная Grid-сетка карточек
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: calc($space * 1.25);
+    }
+}

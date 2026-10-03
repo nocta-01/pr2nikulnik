@@ -1,0 +1,69 @@
+// ============================================
+// База: сброс и типографика
+// ============================================
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $color-text;
+    background-color: $color-background;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    line-height: 1.25;
+    color: $color-text;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: $space;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+p {
+    margin: 0 0 0.75rem;
+}
+
+a {
+    color: $color-accent;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: $color-accent-hover;
+        text-decoration: underline;
+    }
+
+    &:focus-visible {
+        @include focus-ring;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    @include focus-ring;
+}
