@@ -1,0 +1,12 @@
+{
+  "name": "trpo-pr02-student",
+  "version": "1.0.0",
+  "description": "Практическая работа №2: CSS, адаптивная верстка и SCSS",
+  "scripts": {
+    "sass": "sass scss/styles.scss css/styles.css",
+    "sass:watch": "sass --watch scss/styles.scss css/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.71.0"
+  }
+}
