@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Каталог учебных товаров</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <div class="site-header__brand">Каталог учебных товаров</div>
+            <nav class="site-header__nav" aria-label="Основная навигация">
+                <a href="#catalog">Каталог</a>
+                <a href="#about">О проекте</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============================================
+             КАТАЛОГ: панель фильтров + сетка карточек
+             ============================================ -->
+        <section id="catalog" class="catalog-layout container">
+
+            <!-- Панель фильтров -->
+            <aside class="filters" aria-label="Фильтры каталога">
+                <h2 class="filters__title">Фильтры</h2>
+
+                <div class="filters__group">
+                    <label class="filters__label" for="category">Категория</label>
+                    <select id="category" class="filters__select" name="category">
+                        <option value="">Все категории</option>
+                        <option value="books">Книги</option>
+                        <option value="courses">Курсы</option>
+                        <option value="tools">Инструменты</option>
+                    </select>
+                </div>
+
+                <div class="filters__group">
+                    <label class="filters__label" for="price">Максимальная цена, ₽</label>
+                    <input type="number" id="price" class="filters__select" name="price"
+                           min="0" max="5000" step="50" value="2000">
+                </div>
+
+                <div class="filters__group">
+                    <button type="button" class="btn btn--primary btn--block">Применить</button>
+                </div>
+            </aside>
+
+            <!-- Область каталога -->
+            <div class="catalog">
+                <div class="catalog__header">
+                    <h2>Каталог</h2>
+                    <span class="catalog__count">Найдено: 12</span>
+                </div>
+
+                <div class="catalog__grid">
+
+                    <!-- Карточка 1 -->
+                    <article class="card">
+                        <img class="card__image" src="dataset/assets/product-01.svg" alt="Учебный товар 1">
+                        <span class="card__category">Книги</span>
+                        <h3 class="card__title">Учебный товар 1</h3>
+                        <p class="card__rating">Рейтинг: апр.00</p>
+                        <p class="card__price">575 ₽</p>
+                    </article>
+
+                    <!-- Карточка 2 -->
+                    <article class="card">
+                        <img class="card__image" src="dataset/assets/product-02.svg" alt="Учебный товар 2">
+                        <span class="card__category">Курсы</span>
+                        <h3 class="card__title">Учебный товар 2</h3>
+                        <p class="card__rating">Рейтинг: 04.фев</p>
+                        <p class="card__price">660 ₽</p>
+                    </article>
+
+                    <!-- Карточка 3 -->
+                    <article class="card">
+                        <img class="card__image" src="dataset/assets/product-03.svg" alt="Учебный товар 3">
+                        <span class="card__category">Инструменты</span>
+                        <h3 class="card__title">Учебный товар 3</h3>
+                        <p class="card__rating">Рейтинг: 04.апр</p>
+                        <p class="card__price">745 ₽</p>
+                    </article>
+
+                    <!-- Карточка 4 -->
+                    <article class="card">
+                        <img class="card__image" src="dataset/assets/product-01.svg" alt="Учебный товар 4">
+                        <span class="card__category">Книги</span>
+                        <h3 class="card__title">Учебный товар 4</h3>
+                        <p class="card__rating">Рейтинг: 04.июн</p>
+                        <p class="card__price">830 ₽</p>
+                    </article>
+
+                    <!-- Карточка 5 -->
+                    <article class="card">
+                        <img class="card__image" src="dataset/assets/product-02.svg" alt="Учебный товар 5">
+                        <span class="card__category">Курсы</span>
+                        <h3 class="card__title">Учебный товар 5</h3>
+                        <p class="card__rating">Рейтинг: 04.авг</p>
+                        <p class="card__price">915 ₽</p>
+                    </article>
+
+                    <!-- Карточка 6 -->
+                    <article class="card">
+                        <img class="card__image" src="dataset/assets/product-03.svg" alt="Учебный товар 6">
+                        <span class="card__category">Инструменты</span>
+                        <h3 class="card__title">Учебный товар 6</h3>
+                        <p class="card__rating">Рейтинг: 03.авг</p>
+                        <p class="card__price">1000 ₽</p>
+                    </article>
+
+                    <!-- Карточка 7 -->
+                    <article class="card">
+                        <img class="card__image" src="dataset/assets/product-01.svg" alt="Учебный товар 7">
+                        <span class="card__category">Книги</span>
+                        <h3 class="card__title">Учебный товар 7</h3>
+                        <p class="card__rating">Рейтинг: апр.00</p>
+                        <p class="card__price">1085 ₽</p>
+                    </article>
+
+                    <!-- Карточка 8 -->
+                    <article class="card">
+                        <img class="card__image" src="dataset/assets/product-02.svg" alt="Учебный товар 8">
+                        <span class="card__category">Курсы</span>
+                        <h3 class="card__title">Учебный товар 8</h3>
+                        <p class="card__rating">Рейтинг: 04.фев</p>
+                        <p class="card__price">1170 ₽</p>
+                    </article>
+
+                    <!-- Карточка 9 -->
+                    <article class="card">
+                        <img class="card__image" src="dataset/assets/product-03.svg" alt="Учебный товар 9">
+                        <span class="card__category">Инструменты</span>
+                        <h3 class="card__title">Учебный товар 9</h3>
+                        <p class="card__rating">Рейтинг: 04.апр</p>
+                        <p class="card__price">1255 ₽</p>
+                    </article>
+
+                    <!-- Карточка 10 -->
+                    <article class="card">
+                        <img class="card__image" src="dataset/assets/product-01.svg" alt="Учебный товар 10">
+                        <span class="card__category">Книги</span>
+                        <h3 class="card__title">Учебный товар 10</h3>
+                        <p class="card__rating">Рейтинг: 04.июн</p>
+                        <p class="card__price">1340 ₽</p>
+                    </article>
+
+                    <!-- Карточка 11 -->
+                    <article class="card">
+                        <img class="card__image" src="dataset/assets/product-02.svg" alt="Учебный товар 11">
+                        <span class="card__category">Курсы</span>
+                        <h3 class="card__title">Учебный товар 11</h3>
+                        <p class="card__rating">Рейтинг: 04.авг</p>
+                        <p class="card__price">1425 ₽</p>
+                    </article>
+
+                    <!-- Карточка 12 -->
+                    <article class="card">
+                        <img class="card__image" src="dataset/assets/product-03.svg" alt="Учебный товар 12">
+                        <span class="card__category">Инструменты</span>
+                        <h3 class="card__title">Учебный товар 12</h3>
+                        <p class="card__rating">Рейтинг: 03.авг</p>
+                        <p class="card__price">1510 ₽</p>
+                    </article>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ============================================
+             ИНФОРМАЦИОННЫЙ БЛОК
+             ============================================ -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>О проекте</h2>
+                <p>Учебный каталог товаров, созданный для практической работы №2 по дисциплине
+                   «Технологии разработки программного обеспечения».</p>
+                <p>Данные взяты из <code>dataset/catalog.csv</code>, тема оформления —
+                   из <code>dataset/theme.json</code>.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================
+         ПОДВАЛ
+         ============================================ -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 Учебный каталог. Практическая работа №2.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
