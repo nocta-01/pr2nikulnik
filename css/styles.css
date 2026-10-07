@@ -1,10 +1,11 @@
 /* Error: Undefined variable.
  *    ,
- * 20 |     color: $color-text;
- *    |            ^^^^^^^^^^^
+ * 23 |     outline: 3px solid rgba($color-accent, 0.4);
+ *    |                             ^^^^^^^^^^^^^
  *    '
- *   scss\_base.scss 20:12  @use
- *   scss\styles.scss 8:1   root stylesheet */
+ *   scss\_mixins.scss 23:29  focus-ring()
+ *   scss\_base.scss 58:9     @use
+ *   scss\styles.scss 8:1     root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +15,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 20 \2502      color: $color-text;\d\a    \2502             ^^^^^^^^^^^\a    \2575 \a   scss\\_base.scss 20:12  @use\a   scss\\styles.scss 8:1   root stylesheet";
+  content: "Error: Undefined variable.\a    \2577 \a 23 \2502      outline: 3px solid rgba($color-accent, 0.4);\d\a    \2502                              ^^^^^^^^^^^^^\a    \2575 \a   scss\\_mixins.scss 23:29  focus-ring()\a   scss\\_base.scss 58:9     @use\a   scss\\styles.scss 8:1     root stylesheet";
 }
